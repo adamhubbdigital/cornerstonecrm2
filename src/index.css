@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Calendar Styles */
+.rbc-calendar {
+  @apply font-sans;
+}
+
+.rbc-time-view {
+  @apply border-gray-200 rounded-lg overflow-hidden;
+}
+
+.rbc-time-header {
+  @apply border-gray-200;
+}
+
+.rbc-time-header-content {
+  @apply border-gray-200;
+}
+
+.rbc-header {
+  @apply border-gray-200 py-2 font-medium text-gray-600;
+}
+
+.rbc-time-content {
+  @apply border-gray-200;
+}
+
+.rbc-time-gutter {
+  @apply text-sm text-gray-500;
+}
+
+.rbc-timeslot-group {
+  @apply border-gray-100;
+}
+
+.rbc-time-slot {
+  @apply text-gray-400;
+}
+
+.rbc-events-container {
+  @apply mr-0.5;
+}
+
+.rbc-event {
+  @apply border-0 rounded-lg shadow-sm bg-[#6f5192] bg-opacity-90 hover:bg-opacity-100;
+}
+
+.rbc-event-content {
+  @apply text-sm font-medium text-white px-2 py-1;
+}
+
+.rbc-today {
+  @apply bg-[#6f5192] bg-opacity-5;
+}
+
+.rbc-off-range-bg {
+  @apply bg-gray-50;
+}
+
+.rbc-show-more {
+  @apply text-sm text-[#6f5192] hover:text-[#5d4379] hover:underline;
+}
+
+body {
+  @apply text-main-text;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-lynx-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-city-lights rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-american-river;
+}
+
+/* Custom select styling to prevent text overlap */
+.form-select {
+  @apply pr-10 appearance-none bg-no-repeat bg-right;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem !important;
+}
+
+/* Modern form styling */
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect {
+  @apply block w-full rounded-lg border-0 py-3 px-4 text-gray-900 bg-gray-50 shadow-sm ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-[#6f5192] sm:text-sm;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus,
+.form-multiselect:focus {
+  @apply outline-none ring-1 ring-[#6f5192];
+}
+
+.form-label {
+  @apply block text-sm font-medium leading-6 text-gray-900 mb-2;
+}
+
+/* Form group spacing */
+.form-group {
+  @apply space-y-2 mb-4;
+}
+
+/* Required field indicator */
+.required:after {
+  content: " *";
+  @apply text-red-500;
+}
+
+/* Disabled state */
+.form-input:disabled,
+.form-textarea:disabled,
+.form-select:disabled,
+.form-multiselect:disabled {
+  @apply bg-gray-100 cursor-not-allowed;
+}
+
+/* Error state */
+.form-input.error,
+.form-textarea.error,
+.form-select.error,
+.form-multiselect.error {
+  @apply ring-red-500;
+}
+
+.error-message {
+  @apply mt-2 text-sm text-red-600;
+}
+
+/* Modal styling */
+.modal-container {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60] p-4 overflow-y-auto;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl w-full max-w-lg my-8;
+}
+
+.modal-header {
+  @apply sticky top-0 bg-white px-6 py-4 border-b border-gray-200 rounded-t-lg flex items-center justify-between;
+}
+
+.modal-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.modal-close {
+  @apply p-2 hover:bg-gray-100 rounded-full text-gray-500 hover:text-gray-700 transition-colors;
+}
+
+.modal-body {
+  @apply px-6 py-4 max-h-[calc(100vh-16rem)] overflow-y-auto;
+}
+
+.modal-footer {
+  @apply sticky bottom-0 bg-white px-6 py-4 border-t border-gray-200 rounded-b-lg flex justify-end items-center space-x-3;
+}
+
+.modal-cancel {
+  @apply px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6f5192] transition-colors;
+}
+
+.modal-submit {
+  @apply px-4 py-2 bg-[#6f5192] text-white rounded-md hover:bg-[#5d4379] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6f5192] transition-colors;
+}
+
+.modal-delete {
+  @apply px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors;
+}
+
+/* Slide panel styling */
+.slide-panel {
+  @apply fixed inset-y-0 right-0 w-full max-w-2xl bg-white shadow-2xl z-50 flex flex-col;
+}
+
+.slide-panel-header {
+  @apply flex items-center justify-between px-6 py-4 border-b border-gray-200;
+}
+
+.slide-panel-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.slide-panel-close {
+  @apply p-2 hover:bg-gray-100 rounded-full text-gray-500 hover:text-gray-700 transition-colors;
+}
+
+.slide-panel-content {
+  @apply flex-1 overflow-y-auto px-6 py-4;
+}
+
+.slide-panel-footer {
+  @apply sticky bottom-0 bg-white pt-6 pb-6 -mx-6 px-6 border-t border-gray-200 flex justify-end space-x-3;
+}
+
+.slide-panel-cancel {
+  @apply px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6f5192];
+}
+
+.slide-panel-submit {
+  @apply px-4 py-2 bg-[#6f5192] text-white rounded-lg hover:bg-[#5d4379] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6f5192];
+}
+
+.slide-panel-delete {
+  @apply px-4 py-2 text-red-600 hover:text-red-700 focus:outline-none;
+}
+
+/* Calendar agenda view styles */
+.rbc-agenda-view {
+  @apply bg-white rounded-lg;
+}
+
+.rbc-agenda-view table {
+  @apply w-full;
+}
+
+.rbc-agenda-view table.rbc-agenda-table {
+  @apply border-separate border-spacing-0;
+}
+
+.rbc-agenda-view table.rbc-agenda-table tbody > tr > td {
+  @apply border-t border-gray-200 p-4;
+}
+
+.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-time-cell {
+  @apply text-sm text-gray-500 w-32 align-top;
+}
+
+.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-event-cell {
+  @apply text-sm text-gray-900;
+}
+
+.rbc-agenda-time-cell .rbc-continues-after {
+  @apply text-gray-400;
+}
+
+.rbc-agenda-time-cell .rbc-continues-after:after {
+  content: ' »';
+  @apply text-gray-400;
+}
+
+.rbc-agenda-time-cell .rbc-continues-prior {
+  @apply text-gray-400;
+}
+
+.rbc-agenda-time-cell .rbc-continues-prior:before {
+  content: '« ';
+  @apply text-gray-400;
+}
