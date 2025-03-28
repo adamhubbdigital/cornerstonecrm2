@@ -100,27 +100,6 @@ export function Login() {
               {loading ? 'Signing in...' : 'Sign in'}
             </button>
           </div>
-
-          <div className="mt-4 bg-blue-50 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-blue-800 mb-2">Available Test Accounts:</h3>
-            <div className="space-y-2 text-sm text-blue-700">
-              <p>
-                <strong>Email:</strong> adam@pregnancyadvice.org.uk
-                <br />
-                <strong>Password:</strong> Password1234
-              </p>
-              <p>
-                <strong>Email:</strong> georgina@pregnancyadvice.org.uk
-                <br />
-                <strong>Password:</strong> Password2345
-              </p>
-              <p>
-                <strong>Email:</strong> camilla@pregnancyadvice.org.uk
-                <br />
-                <strong>Password:</strong> Password3456
-              </p>
-            </div>
-          </div>
         </form>
       </div>
     </div>
