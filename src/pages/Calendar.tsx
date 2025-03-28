@@ -69,7 +69,7 @@ const CustomToolbar = (props: ToolbarProps) => {
   const isMobile = window.innerWidth < 768;
   
   return (
-    <div className="flex items-center justify-between mb-6">
+    <div className="flex items-center justify-between p-6">
       <div className="flex items-center space-x-4">
         <h2 className="text-xl font-semibold text-gray-900">{monthYear}</h2>
         <div className="flex items-center space-x-2">
@@ -482,7 +482,7 @@ export function Calendar() {
             startAccessor="start"
             endAccessor="end"
             style={{ height: 'calc(100vh - 250px)' }}
-            defaultView={isMobile ? 'agenda' : 'week'}
+            defaultView={isMobile ? 'agenda' : 'month'}
             views={isMobile ? { agenda: true } : {
               month: true,
               week: true,
@@ -514,6 +514,7 @@ export function Calendar() {
               tomorrow: 'Tomorrow',
               yesterday: 'Yesterday'
             }}
+            className="p-6"
           />
         </div>
 

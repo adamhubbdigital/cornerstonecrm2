@@ -98,12 +98,15 @@ export function Dashboard() {
     );
   }
 
+  // Get first name only
+  const firstName = user?.user_metadata?.full_name?.split(' ')[0] || 'there';
+
   return (
     <PageTransition>
       <div className="space-y-8">
         {/* Welcome Section */}
         <h1 className="text-2xl font-semibold text-main-text mt-5 leading-[1.7rem]">
-          Hi {user?.user_metadata?.full_name || 'there'}, welcome to Cornerstone CRM
+          Hi {firstName}, welcome to Cornerstone CRM
         </h1>
 
         {/* Shortcuts Grid */}
